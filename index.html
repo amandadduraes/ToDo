@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>To Do List</h1>
+      <div class="form">
+        <form @submit.prevent="save()">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Entre com uma tarefa ..." v-model="toDo" ref="toDoInput"
+          />
+          <button type="submit">Enviar</button>
+        </form>
+        <p class="error-message" v-show="errorMessage">{{errorMessage}}</p>
+      </div>
+      <div class="to-do-list">
+        <ol>
+          <li v-for="td in toDoList" :key="td.text">
+            <span class="text" :class="{'completed': td.completed}"> {{td.text}}</span>
+            <span class="actions">
+              <button class="complete" v-if="!td.completed" @click="complete(td)">&#10004;</button>
+              <button class="remove" @click="remove(toDo)">&#10006;</button>
+            </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="src/script.js"></script>
+  </body>
+</html>

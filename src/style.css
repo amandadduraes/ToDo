@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: azure;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: crimson;
+  }
+  
+  #app {
+    width: 380px;
+    height: 90vh;
+    margin: 5vh auto;
+    padding: 10px;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    border-radius: 3px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  form input {
+    width: 80%;
+    border: 0;
+    padding: 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  
+  form button {
+    width: 20%;
+    border: 0;
+    background-color: crimson;
+    color: aliceblue;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  
+  .error-message {
+    margin-bottom: 10px;
+    color: red;
+    padding: 3px;
+    background-color: #ffaaaa;
+    border-radius: 3px;
+    font-size: 0.8em;
+  }
+  
+  .to-do-list ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .to-do-list li {
+    padding: 3px;
+    border-top: 1px solid crimson;
+    display:flex;
+    justify-content: space-between;
+  }
+  
+  .to-do-list ol li .text {
+    max-width: calc(100% - 60px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .to-do-list ol li .text.completed {
+    text-decoration: line-through;
+  }
+  
+  .to-do-list ol li .actions {
+    width: 45px;
+    display: flex;
+    vertical-align: middle;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  
+  .to-do-list ol li .actions button {
+    width: 20px;
+    padding: 2px;
+    height: 20px;
+    line-height: 15px;
+    border-radius: 10px;
+    font-size: 11px;
+    border: 1px solid #ffaaaa;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .to-do-list ol li .actions button.complete {
+    color: #229966;
+    border: 1px solid #229966;
+  }
+
+  .to-do-list ol li .actions button.remove {
+    margin-left: 5px;
+    color: #992222;
+    border: 1px solid #992222;
+    cursor: pointer;
+  }
+
+
+  
+  
